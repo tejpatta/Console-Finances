@@ -87,19 +87,47 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+//Create needed variables
 var totalMonths = finances.length;
-
 var selectedMonth = 0;
 var prevMonth = 0;
 var monthlyDiff = 0;
+var monthlyDiffTotal = 0;
 var avgMonthlyChange = 0;
-var greatestIncrease;
-var greatestDecrease;
-var totalProfitLoss = 0
+var greatestIncrease = 0;
+var greatestDecrease = 0;
+var totalProfitLoss = 0;
+var namedMonthIncrease;
+var namedMonthDecrease;
 
-for(var i=0; i<finances.length; i++){
-selectedMonth = finances[i][1]
-totalProfitLoss = totalProfitLoss + selectedMonth
+for(var i=0; i<finances.length; i++){ //create loop for the data in finances
+selectedMonth = finances[i][1]; 
+totalProfitLoss = totalProfitLoss + selectedMonth;
+
+if(i>0) {
+monthlyDiff = selectedMonth - prevMonth; //calculate the change in profit 
 }
+prevMonth = selectedMonth;
+monthlyDiffTotal = monthlyDiffTotal + monthlyDiff;
+
+if(monthlyDiff>greatestIncrease){ //compare the changes by looping and making the variable store each time the change is greater
+greatestIncrease = monthlyDiff;
+namedMonthIncrease = finances[i][0];
+}
+
+if(monthlyDiff<greatestDecrease){ //compare the changes by looping and making the variable store each time the change value is less than previous
+greatestDecrease = monthlyDiff;
+namedMonthDecrease = finances[i][0];
+}
+}
+
+avgMonthlyChange = Math.round(monthlyDiffTotal/(totalMonths-1)*100)/100; //calculate the average of the month-on-month changes
+
+//log the calculated data in the console
+console.log("Financial Analysis");
+console.log("-----------------");
 console.log("Total Months: " + totalMonths);
-console.log("Total: " + totalprofitloss)
+console.log("Total: " + totalProfitLoss);
+console.log("Average Change: " + avgMonthlyChange)
+console.log("Greatest Increase in Profits: " + namedMonthIncrease + " $" + greatestIncrease)
+console.log("Greatest Decrease in Profits: " + namedMonthDecrease + " $" + greatestDecrease);
