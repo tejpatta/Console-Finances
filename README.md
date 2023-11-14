@@ -10,7 +10,8 @@ This webpage was created in response to a  boot camp assignment to apply skills 
 Accessible on Git Hub Pages at the link below in 'usage'.
 
 ## Usage
-The site can be accessed here: 
+The site can be accessed here: https://tejpatta.github.io/Bootstrap-Portfolio/
+
 On the webpage, right-click and select 'Inspect' to open the console and see the results of the calculations completed on the given data.
 
 ## Credits
