@@ -1,6 +1,7 @@
 # Console-Finances
 ## Description
 
+![image](https://github.com/tejpatta/Console-Finances/assets/147752590/1d847289-0c92-4b11-8bf8-d95d004214a0)
 
 This webpage was created in response to a  boot camp assignment to apply skills learnt in JavaScript. A real world situation is provided with a database of profit and loss against particular months. It uses JS arrays, for loops, if statements, and console.log to calculate and display (in the console) a variety of pertinent data: Total Months, Net Total, Average Change, Greatest Increase in Profits/Losses and Greatest Decrease.
 
