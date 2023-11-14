@@ -87,7 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-//Create needed variables
+//Create the variables, initialize them at 0
 var totalMonths = finances.length;
 var selectedMonth = 0;
 var prevMonth = 0;
